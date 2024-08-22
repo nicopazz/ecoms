@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import DarkMode from "./DarkMode";
@@ -53,7 +52,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <a
               href="#"
-              className="text-primary font semibold tracking-widest text-2xl uppercase sm:text-3xl"
+              className="text-primary font semibold tracking-widest text-2xl uppercase sm:text-3xl font-semibold"
             >
               ecoms
             </a>
@@ -86,9 +85,10 @@ const Navbar = () => {
                     <ul className="space-y-2">
                       {
                         DropdownLinks.map((data,index) => (
-                          <li>
+                          <li key={index}>
                             <a className="text-gray-500 hover:text-black dark:hover:text-white duration-200 inline-block w-full p-2 hover:bg-primary/20 rounded-md font-semibold" 
-                            href={data.link}>
+                            href={data.link}
+                            >
                               {data.name}
                             </a>
                           </li>
